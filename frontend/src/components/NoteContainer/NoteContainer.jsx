@@ -9,7 +9,7 @@ function NoteContainer() {
   // const save = ()=>{
 
   // }
-
+  axios.defaults.withCredentials=true;
   useEffect( ()=>{
        axios
         .get("api/v1/notes/allnotes")
