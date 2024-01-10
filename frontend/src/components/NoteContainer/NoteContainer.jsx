@@ -9,10 +9,10 @@ function NoteContainer() {
   // const save = ()=>{
 
   // }
-  axios.defaults.withCredentials=true;
+  // axios.defaults.withCredentials=true;
   useEffect( ()=>{
        axios
-        .get("api/v1/notes/allnotes")
+        .get("https://notetakingapp-backend.onrender.com/api/v1/notes/allnotes")
         .then((res) => {
           setNotes(res.data)
         }).catch((error)=>{
