@@ -10,7 +10,7 @@ function NoteContainer() {
 
   // }
   // axios.defaults.withCredentials=true;
-  useEffect( ()=>{
+  // useEffect( ()=>{
        axios
         .get("https://notetakingapp-backend.onrender.com/api/v1/notes/allnotes")
         .then((res) => {
@@ -18,7 +18,7 @@ function NoteContainer() {
         }).catch((error)=>{
           console.log("Error in reciving notes", error);
         })
-  },[]);
+  // },[]);
 
 
   //css

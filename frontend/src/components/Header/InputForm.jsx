@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const InputFormcss = {
   display: "flex",
   flexDirection: "column",
@@ -64,6 +65,7 @@ function InputForm() {
   const [author, setAuthor] = useState();
   const [title, setTitle] = useState();
   const [content, setContent] = useState();
+  const navigate=useNavigate();
 
   const handleSubmit = async () => {
     try {
@@ -76,10 +78,12 @@ function InputForm() {
         })
         .then(() => {
           console.log("data send successfully");
+          
         });
     } catch (error) {
       console.log("error during calling save api");
     }
+    navigate("/");
   };
 
   return (

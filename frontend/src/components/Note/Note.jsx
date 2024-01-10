@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import deleteimg from "../../assets/delete.svg"
 import editing from "../../assets/edit.svg"
 import check from "../../assets/check.svg"
@@ -42,7 +42,7 @@ const editTxtarea={
 
 function Note({_id,author,title ,content}) {
  
-  // const navigate=useNavigate();
+  const navigate=useNavigate();
   const noteId = _id;
   const [id,setId] = useState(noteId);
   const [noteAuthor,setNoteAuthor] = useState(author);
@@ -60,11 +60,12 @@ function Note({_id,author,title ,content}) {
     .then((res)=>{
       setUpdate(true);
       console.log("data send for deletion successfully",res);
+      
     })
     .catch((error)=>{
       console.log("Error during calling api of delete note",error);
     })
-    // navigate("/");
+    navigate("/");
   }
 
   const handleUpdate= async ()=>{
@@ -82,7 +83,7 @@ function Note({_id,author,title ,content}) {
     .catch((error)=>{
       console.log("Error during calling api of update note",error);
     })
-    // navigate("api/v1/notes")
+    navigate("/")
 }
 
 
