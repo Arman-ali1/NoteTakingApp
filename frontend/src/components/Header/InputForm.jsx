@@ -24,7 +24,7 @@ const InputFormcss = {
     border: "2px #818CF8 solid",
     borderRadius: "5px",
     background: "#e8e8e8",
-    padding: "20px 200px",
+    padding: "20px 20px",
     margin: "10px",
   },
   textarea: {
